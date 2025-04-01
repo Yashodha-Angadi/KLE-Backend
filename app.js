@@ -14,7 +14,8 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/Yashoda')
+let MONGODB_URL='mongodb+srv://yashodaangadi18:30RsN9WFO8FiH54P@cluster0.1lsxxvq.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(MONGODB_URL)
 .then(()=>{
     console.log('DB connected');
 }).catch((err)=>{
